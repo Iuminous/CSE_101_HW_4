@@ -1,7 +1,7 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
 
 public class Node {
-	public ArrayList<Node> list = new Arraylist<>;
+	public ArrayList<Node> list = new ArrayList<>();
 	public int degree;
 	public int id;
 
