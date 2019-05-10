@@ -15,6 +15,20 @@ public class Node {
 		degree++;
 	}
 
+	public void removeNeighbor(int x) {
+		int index = list.indexOf(Integer.toString(x));
+		list.remove(index);
+		degree--;
+	}
+
+	public void removeAllNeighbors() {
+		for (int i = 0; i < list.size(); i++) {
+			list[i].removeNeighbor(id);
+			list.remove(i);
+		}
+		degree = 0;
+	}
+
 	public void printNode() {
 		System.out.println(id);
 	}
@@ -26,4 +40,3 @@ public class Node {
 		}
 	}
 }
-
