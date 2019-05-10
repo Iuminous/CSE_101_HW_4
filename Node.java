@@ -1,4 +1,4 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
 
 public class Node {
 	public ArrayList<Node> list = new Arraylist<>;
