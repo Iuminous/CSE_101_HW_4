@@ -11,19 +11,24 @@ public class Node {
 	}
 
 	public void addNeighbor(Node x) {
-		add(x);
+		list.add(x);
 		degree++;
 	}
 
 	public void removeNeighbor(int x) {
-		int index = list.indexOf(Integer.toString(x));
-		list.remove(index);
+        for(int i = 0; i < list.size(); i++) {
+            if(list.get(i).id == x) {
+                list.remove(i);
+                break;
+            }
+        }
 		degree--;
+        
 	}
 
 	public void removeAllNeighbors() {
 		for (int i = 0; i < list.size(); i++) {
-			list[i].removeNeighbor(id);
+			list.get(i).removeNeighbor(id);
 			list.remove(i);
 		}
 		degree = 0;
